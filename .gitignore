@@ -1,0 +1,17 @@
+#compiled Object files
+*.obj
+*.o
+*.pdb
+
+#skip user files
+*Debug*
+*Release*
+*ipch*
+*.log
+*.err
+*.wrn
+*.inc
+*.mac
+*.pch
+*.src
+*.sdf
