@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Computer-Graphics-w2", "Computer-Graphics-w2.vcxproj", "{C76F0C8E-0473-ACE6-699C-E6567D1BAA4F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "w2_1", "..\w2_1\w2_1.vcxproj", "{328C08AE-B7B0-423F-B04B-9CFFFF8D94FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{C76F0C8E-0473-ACE6-699C-E6567D1BAA4F}.Debug|Win32.Build.0 = Debug|Win32
 		{C76F0C8E-0473-ACE6-699C-E6567D1BAA4F}.Release|Win32.ActiveCfg = Release|Win32
 		{C76F0C8E-0473-ACE6-699C-E6567D1BAA4F}.Release|Win32.Build.0 = Release|Win32
+		{328C08AE-B7B0-423F-B04B-9CFFFF8D94FC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{328C08AE-B7B0-423F-B04B-9CFFFF8D94FC}.Debug|Win32.Build.0 = Debug|Win32
+		{328C08AE-B7B0-423F-B04B-9CFFFF8D94FC}.Release|Win32.ActiveCfg = Release|Win32
+		{328C08AE-B7B0-423F-B04B-9CFFFF8D94FC}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
