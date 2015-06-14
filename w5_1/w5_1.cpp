@@ -18,14 +18,14 @@ GLint vertex[] =
 1, 1, 1 }; //7
 
 GLfloat color[] =
-{ 0, 0, 0,
-0, 0, 1,
-0, 1, 0,
-0, 1, 1,
-1, 0, 0,
-1, 0, 1,
-1, 1, 0,
-1, 1, 1 };
+{ 0, 0, 0, 1,
+0, 0, 1, 1,
+0, 1, 0, 0.5,
+0, 1, 1, 0.5,
+1, 0, 0, 0.5,
+1, 0, 1, 0.5,
+1, 1, 0, 0.5,
+1, 1, 1, 0.5 };
 
 GLuint indices[] =
 { 0, 1, 3, 2,
@@ -44,7 +44,7 @@ void display(void)
     glClearDepth(1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    glShadeModel(GL_FLAT);
+    //glShadeModel(GL_FLAT);
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LESS);    
 
@@ -60,6 +60,7 @@ void display(void)
 
     glViewport(0, 0, 500, 500);
     glEnable(GL_VIEWPORT);
+    
 
     //glRotatef(45, 1, 0, 0);
     glDrawElements(GL_QUADS, 24, GL_UNSIGNED_INT, BUFFER_OFFSET(0));
@@ -74,7 +75,7 @@ void init()
     glBindBuffer(GL_ARRAY_BUFFER, buffer[0]);
     glBufferData(GL_ARRAY_BUFFER, sizeof(color), color, GL_STATIC_DRAW);
     glEnableClientState(GL_COLOR_ARRAY);
-    glColorPointer(3, GL_FLOAT, 0, BUFFER_OFFSET(0));
+    glColorPointer(4, GL_FLOAT, 0, BUFFER_OFFSET(0));
 
     glBindBuffer(GL_ARRAY_BUFFER, buffer[1]);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertex), vertex, GL_STATIC_DRAW);
@@ -96,6 +97,9 @@ void init()
 
     glScissor(0, 0, 350, 350);
     glEnable(GL_SCISSOR_TEST);
+    glAlphaFunc(GL_GREATER, 0.6);
+    glEnable(GL_ALPHA_TEST);
+
 }
 
 void Keyboard(unsigned char key, int x, int y)
